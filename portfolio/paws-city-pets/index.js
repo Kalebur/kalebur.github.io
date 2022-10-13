@@ -5,21 +5,21 @@ const appVars = {
       name: "Elaine Bennet",
       statement:
         "I often order food for my dog from this store as they offer free shipping. The prices here are quite low, and you can order a lot of goods by top manufacturers.",
-      image: "/assets/photos/testimonial-elaineb.jpg",
+      image: "../assets/photos/testimonial-elaineb.jpg",
     },
 
     {
       name: "Todd Preston",
       statement:
         "I buy all of my dog food and toys from here. They have an amazing selection, and if something I need is out of stock, they'll have it rush delivered straight to my door.",
-      image: "/assets/photos/testimonial-toddp.jpg",
+      image: "../assets/photos/testimonial-toddp.jpg",
     },
 
     {
       name: "Cathy Morgan",
       statement:
         "This store carries a lot of hard to find products. My cat is a senior and has to be fed a specific type of food. This is the only place I've been able to find it, and it's also really affordable!",
-      image: "/assets/photos/testimonial-cathym.jpg",
+      image: "../assets/photos/testimonial-cathym.jpg",
     },
   ],
   siteBody: document.querySelector("body"),
