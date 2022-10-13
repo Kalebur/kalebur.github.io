@@ -486,7 +486,7 @@ main .hero {
   /* HERO SECTION */
 }
 main .hero .content-area {
-  background: url("/assets/photos/puppy-hero-bg.jpg");
+  background: url("../assets/photos/puppy-hero-bg.jpg");
   background-size: 350%;
   background-position: 70% 60%;
   background-repeat: no-repeat;
@@ -640,33 +640,33 @@ main .pet-types .pet-type-card .card-info .button:hover {
   background-color: rgba(63, 156, 224, 0.85);
 }
 main .pet-types .pet-dogs {
-  background: url("/assets/photos/dogs.jpg");
+  background: url("../assets/photos/dogs.jpg");
   background-size: 250%;
   background-position: 5% 72.5%;
   grid-area: dogs;
 }
 main .pet-types .pet-cats {
-  background: url("/assets/photos/cats.jpg");
+  background: url("../assets/photos/cats.jpg");
   background-size: cover;
   background-position: 60% 100%;
   background-repeat: no-repeat;
   grid-area: cats;
 }
 main .pet-types .pet-birds {
-  background: url("/assets/photos/birds.jpg");
+  background: url("../assets/photos/birds.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   grid-area: birds;
 }
 main .pet-types .pet-fish {
-  background: url("/assets/photos/fish.jpg");
+  background: url("../assets/photos/fish.jpg");
   background-size: cover;
   background-position: center 20%;
   grid-area: fish;
 }
 main .pet-types .pet-reptiles {
-  background: url("/assets/photos/reptiles.jpg");
+  background: url("../assets/photos/reptiles.jpg");
   background-size: cover;
   background-position: center;
   grid-area: reptiles;
@@ -807,7 +807,7 @@ main .testimonials .content-area .testimonial-photo {
   border-radius: 50%;
   width: 250px;
   height: 250px;
-  background: url("/assets/photos/testimonial-elaineb.jpg");
+  background: url("../assets/photos/testimonial-elaineb.jpg");
   background-size: cover;
   background-position: center;
 }
