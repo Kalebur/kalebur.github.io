@@ -1,0 +1,33 @@
+/* COLORS */
+
+$color-blue-dark: #003964;
+$color-blue: #074980;
+$color-blue-light: #3f9ce0;
+$color-green: #39b173;
+$color-orange: #f88824;
+$color-orange-dark: #d5731c;
+$color-red: #f85c62;
+$color-purple-light: #c5b0d9;
+$color-purple: #8560a6;
+$color-yellow: #f7b219;
+$color-white: #eff3f7;
+$color-black: #222;
+$color-gray-1: rgb(97, 97, 97);
+
+/* TRANSITIONS */
+$transition-default: all 0.4s;
+
+/* BOX SHADOWS */
+$shadow-default: 0 5px 0 rgba($color-black, 0.15);
+
+/* BORDER PROPERTIES */
+$border-radius-tiny: 5px;
+$border-radius-small: 10px;
+$border-radius-default: 20px;
+
+/* TYPOGRAPHY */
+$font-sans: "Roboto", "Franklin Gothic Medium", Tahoma, sans-serif;
+$font-serif: "Roboto Slab", serif;
+
+/* PADDINGS */
+$padding-default: 1.5rem;

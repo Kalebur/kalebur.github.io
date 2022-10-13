@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body,
+html {
+  background-color: $color-yellow;
+  color: $color-white;
+  overflow-x: hidden;
+  font-size: 62.5%;
+}
+
+html,
+p,
+span {
+  font-family: $font-sans;
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+.content-area {
+  width: 100%;
+  margin: 0 auto;
+}
+
+button,
+.button {
+  border: none;
+  background-color: $color-blue;
+  color: $color-white;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:active {
+    outline: none;
+  }
+}
+
+.showcase-btn {
+  position: absolute;
+  background-color: transparent;
+  color: $color-orange;
+  transition: $transition-default;
+  font-size: 10rem;
+
+  &:hover {
+    color: $color-yellow;
+    text-shadow: $shadow-default;
+  }
+}
+
+.btn-orange {
+  width: 100%;
+  padding: 1rem 0;
+  background-color: $color-orange;
+  display: block;
+  border-radius: $border-radius-tiny;
+  transition: $transition-default;
+
+  font-family: $font-serif;
+  font-size: 2rem;
+
+  &:hover {
+    background-color: $color-yellow;
+    box-shadow: $shadow-default;
+    transform: translateY(-5px);
+  }
+}
+
+a:link,
+a:visited {
+  color: $color-white;
+  transition: $transition-default;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+input,
+textarea {
+  &:focus {
+    outline: none;
+    border: 3px solid $color-orange;
+    box-shadow: 0 0 20px $color-orange;
+    transition: $transition-default;
+  }
+
+  &::placeholder {
+    text-transform: uppercase;
+  }
+
+  &.invalid {
+    border-color: $color-red;
+    box-shadow: 0 0 20px red;
+  }
+}
+
+/* UTILITY CLASSES */
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+}
+
+.no-display {
+  display: none;
+}
+
+.fadeOut,
+.fadeIn {
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+.cart-success,
+.cart-success:focus,
+.cart-success:focus-visible,
+.cart-success:active,
+.cart-success:hover {
+  background-color: $color-green;
+  border: none;
+}
+
+@media screen and (min-width: 800px) {
+  .content-area {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .content-area {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .content-area {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .content-area {
+    width: 50%;
+  }
+}

@@ -1,0 +1,69 @@
+/* COLORS */
+/* TRANSITIONS */
+/* BOX SHADOWS */
+main {
+  /* PETS SECTION */
+}
+main .hero {
+  background-color: #f7b219;
+}
+main .hero .content-area {
+  background: url("/assets/photos/puppy-hero-bg.jpg");
+  background-size: 150%;
+  background-position: 60% 80%;
+  background-repeat: no-repeat;
+  height: 100%;
+  padding-bottom: 25rem;
+  color: #003964;
+}
+main .hero nav {
+  width: 100%;
+  color: #eff3f7;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 0 rgba(34, 34, 34, 0.1);
+}
+main .hero nav ul {
+  display: flex;
+  /* STYLES FOR NAVIGATION MENU ITEMS */
+}
+main .hero nav ul li {
+  flex-grow: 1;
+  flex-basis: 20%;
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 3rem 0;
+  font-weight: bold;
+}
+main .hero nav ul .menu-dogs {
+  background-color: #f85c62;
+}
+main .hero nav ul .menu-cats {
+  background-color: #8560a6;
+}
+main .hero nav ul .menu-birds {
+  background-color: #f88824;
+}
+main .hero nav ul .menu-fish {
+  background-color: #3f9ce0;
+}
+main .hero nav ul .menu-reptiles {
+  background-color: #39b173;
+}
+main .hero h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  width: 50%;
+  margin-top: 8rem;
+}
+main .hero p {
+  margin: 2.5rem 0;
+  width: 40%;
+  font-size: 2rem;
+}
+main .hero h1,
+main .hero p,
+main .hero button {
+  margin-left: 3rem;
+}

@@ -1,0 +1,9 @@
+@mixin section-background-full-width {
+  content: "";
+  height: 100%;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: -33.333333%;
+  z-index: -1;
+}
