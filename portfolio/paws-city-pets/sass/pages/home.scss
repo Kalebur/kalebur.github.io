@@ -5,7 +5,7 @@ main {
     background-color: $color-yellow;
 
     .content-area {
-      background: url("/assets/photos/puppy-hero-bg.jpg");
+      background: url("../assets/photos/puppy-hero-bg.jpg");
       background-size: 350%;
       background-position: 70% 60%;
       background-repeat: no-repeat;
@@ -195,14 +195,14 @@ main {
     }
 
     .pet-dogs {
-      background: url("/assets/photos/dogs.jpg");
+      background: url("../assets/photos/dogs.jpg");
       background-size: 250%;
       background-position: 5% 72.5%;
       grid-area: dogs;
     }
 
     .pet-cats {
-      background: url("/assets/photos/cats.jpg");
+      background: url("../assets/photos/cats.jpg");
       background-size: cover;
       background-position: 60% 100%;
       background-repeat: no-repeat;
@@ -210,7 +210,7 @@ main {
     }
 
     .pet-birds {
-      background: url("/assets/photos/birds.jpg");
+      background: url("../assets/photos/birds.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -218,14 +218,14 @@ main {
     }
 
     .pet-fish {
-      background: url("/assets/photos/fish.jpg");
+      background: url("../assets/photos/fish.jpg");
       background-size: cover;
       background-position: center 20%;
       grid-area: fish;
     }
 
     .pet-reptiles {
-      background: url("/assets/photos/reptiles.jpg");
+      background: url("../assets/photos/reptiles.jpg");
       background-size: cover;
       background-position: center;
       grid-area: reptiles;
@@ -399,7 +399,7 @@ main {
           height: 250px;
           width: 250px;
           border-radius: 50%;
-          background: url("/assets/photos/testimonial-elaineb.jpg");
+          background: url("../assets/photos/testimonial-elaineb.jpg");
           background-size: cover;
           background-position: center;
         }

@@ -805,11 +805,8 @@ main .testimonials .content-area .testimonial p:last-of-type {
 }
 main .testimonials .content-area .testimonial-photo {
   height: 250px;
-<<<<<<< HEAD
   width: 250px;
   border-radius: 50%;
-=======
->>>>>>> 93b98414908ba07177ebcabaf86773b05d011b0a
   background: url("../assets/photos/testimonial-elaineb.jpg");
   background-size: cover;
   background-position: center;

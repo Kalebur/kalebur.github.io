@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luna Bella's Authentic Italian</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&family=Playfair+Display:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header id="top" class="no-js">
+      <div class="logo-nav no-js">
+        <p class="logo">Luna Bella's</p>
+        <nav class="main-nav" aria-expanded="false">
+          <i class="fa-solid fa-bars hamburger" tabindex="0"></i>
+          <ul>
+            <li class="nav-link"><a href="#story">Story</a></li>
+            <li class="nav-link"><a href="#food">Food</a></li>
+            <li class="nav-link"><a href="#staff">Staff</a></li>
+            <li class="nav-link"><a href="#wines">Wines</a></li>
+            <li class="nav-link"><a href="#location">Location</a></li>
+          </ul>
+        </nav>
+      </div>
+      <h1>Experience <span class="subheader">the flavors of Italy</span></h1>
+      <a href="#book-now" class="btn">Book a Table</a>
+    </header>
+    <section class="our-story" id="story">
+      <div class="content">
+        <h2>Our Story</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+          consequuntur ipsa voluptas aliquam, aperiam illo officiis fugiat totam
+          earum? Quis cum iusto laboriosam commodi aliquam, nam nulla maiores ea
+          excepturi.
+        </p>
+        <img
+          src="assets/images/grandma.webp"
+          alt="Luna Bella's grandmother, Electra"
+          srcset=""
+        />
+      </div>
+    </section>
+    <section class="our-food" id="food">
+      <div class="content">
+        <h2>Our Food</h2>
+        <h3 class="food-type">Pasta</h3>
+        <p class="food-desc">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex sit rem
+          autem libero pariatur recusandae. Iste sapiente doloremque unde
+          dolorum itaque eaque consequatur magni odit id? Possimus, commodi ex!
+          Dolore?
+        </p>
+        <div class="switcher-buttons">
+          <button data-food-index="0" class="switcher-button active">
+            <span class="sr-only">Show Pasta Info</span>
+          </button>
+          <button data-food-index="1" class="switcher-button">
+            <span class="sr-only">Show Pizza Info</span>
+          </button>
+          <button data-food-index="2" class="switcher-button">
+            <span class="sr-only">Show Soups Info</span>
+          </button>
+        </div>
+        <button class="btn-chevron prev-food">
+          <i class="fa-solid fa-chevron-left"></i></button
+        ><button class="btn-chevron next-food">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+    <section class="our-staff" id="staff">
+      <div class="content">
+        <h2>Meet Our Staff</h2>
+        <div class="staff-container">
+          <div class="staff-card">
+            <img src="assets/images/luna-bella.webp" />
+            <h3>Head Chef &mdash; Luna Bella</h3>
+          </div>
+          <div class="staff-card">
+            <img src="assets/images/constantino.webp" />
+            <h3>Sous Chef &mdash; Constantino</h3>
+          </div>
+          <div class="staff-card">
+            <img src="assets/images/trevor.webp" />
+            <h3>Sous Chef &mdash; Trevor</h3>
+          </div>
+          <div class="staff-card">
+            <img src="assets/images/stephen.webp" />
+            <h3>Maître d' - Stephen</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="our-wines" id="wines">
+      <div class="content">
+        <h2>Our Wines</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam
+          dolores illo mollitia at ducimus saepe aliquam nostrum laborum? Sunt
+          eum officia odio enim sapiente porro consequatur numquam ullam.
+          Numquam aut magnam error, nam quidem nostrum placeat! Deserunt odit
+          modi omnis!
+        </p>
+      </div>
+    </section>
+    <section class="book-now" id="book-now">
+      <div class="content">
+        <h2>Book a Table</h2>
+        <form action="">
+          <div class="input-group">
+            <label for="name">Name</label>
+            <input type="text" autocomplete="name" />
+          </div>
+          <div class="input-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" autocomplete="tel-area-code" />
+          </div>
+          <div class="input-group">
+            <label for="reservation-time">Reservation Day/Time</label>
+            <input type="date" autocomplete="off" />
+          </div>
+          <div class="input-group">
+            <label for="phone">Reservation Time</label>
+            <input type="time" value="19:30" />
+          </div>
+          <div class="input-group">
+            <label for="guest-count">Guest Count</label>
+            <input
+              type="number"
+              autocomplete="off"
+              min="2"
+              max="20"
+              value="2"
+            />
+          </div>
+          <button class="btn" id="btn-book">Book Now</button>
+        </form>
+      </div>
+    </section>
+    <section class="contact-info" id="location">
+      <div class="content">
+        <h2>Our Location</h2>
+        <div class="contact-container">
+          <iframe
+            class="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3141.383607104173!2d-84.51949948436756!3d38.061446503386435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88424480b138eb35%3A0xb6b8942a1d7f9f57!2sOld%20W%20Main%20St%2C%20Lexington%2C%20KY%2040508!5e0!3m2!1sen!2sus!4v1667530604077!5m2!1sen!2sus"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <div class="hours">
+            <h3>Hours</h3>
+            <p>mon:<span class="time">4pm &mdash; 10pm</span></p>
+            <p>tue:<span class="time">4pm &mdash; 10pm</span></p>
+            <p>wed:<span class="time">4pm &mdash; 10pm</span></p>
+            <p>thu:<span class="time">4pm &mdash; 10pm</span></p>
+            <p>fri:<span class="time">4pm &mdash; 12am</span></p>
+            <p>sat:<span class="time">4pm &mdash; 12am</span></p>
+            <p>sun:<span class="time">12pm &mdash; 9pm</span></p>
+          </div>
+          <div class="contact-and-socials">
+            <h3>Contact Us</h3>
+            <p>P:(555) 555-5555</p>
+            <p>E:hello@lunabellasitalian.com</p>
+            <address>
+              7890 Old W Main St <br />
+              Lexington, KY 40508
+            </address>
+
+            <h3>Socials</h3>
+            <div class="social-icons">
+              <a href="javascript:void(0);" class="social-icon"
+                ><i class="fa-brands fa-facebook-f"></i></a
+              ><a href="javascript:void(0);" class="social-icon"
+                ><i class="fa-brands fa-twitter"></i></a
+              ><a href="javascript:void(0);" class="social-icon"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>&copy;2022 Luna Bella's Italian Cuisine</p>
+      <p>Privacy Policy</p>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
