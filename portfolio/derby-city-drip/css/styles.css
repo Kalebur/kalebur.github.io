@@ -47,7 +47,7 @@ p {
 a {
   text-decoration: none;
 }
-a:visited {
+a:link, a:active, a:visited {
   color: white;
 }
 
@@ -65,8 +65,7 @@ a:visited {
 .btn-brown {
   background-color: #45230f;
 }
-.btn-brown:hover,
-.btn-brown:active {
+.btn-brown:hover, .btn-brown:active {
   background-color: #b98757;
 }
 
@@ -136,12 +135,7 @@ footer .content-area .footer-top .social-links .social-icons .social-icon {
   background-color: #d5e2e2;
   transition: all 0.4s linear;
 }
-footer
-  .content-area
-  .footer-top
-  .social-links
-  .social-icons
-  .social-icon:hover {
+footer .content-area .footer-top .social-links .social-icons .social-icon:hover {
   color: #f2f2f2;
   background-color: #b98757;
 }
@@ -179,12 +173,7 @@ footer .content-area .footer-bottom p:not(:last-of-type) {
     justify-content: flex-start;
     padding: 0;
   }
-  footer
-    .content-area
-    .footer-top
-    .social-links
-    .social-icons
-    .social-icon:not(:first-of-type) {
+  footer .content-area .footer-top .social-links .social-icons .social-icon:not(:first-of-type) {
     margin-left: 3rem;
   }
   footer .footer-bottom {
@@ -257,19 +246,24 @@ header nav ul {
 header nav ul li {
   width: 100%;
   background-color: #233237;
-  color: #45230f;
+  color: #f2f2f2;
   padding: 1rem 0;
   font-size: 2rem;
   text-transform: uppercase;
   text-align: center;
 }
+header nav ul li a:link,
+header nav ul li a:active,
+header nav ul li a:visited {
+  color: #f2f2f2;
+}
+header nav ul li a.nav-link:link,
+header nav ul li a.nav-link:visited,
+header nav ul li a.nav-link:active {
+  color: #f2f2f2;
+}
 header nav ul li:active {
   background-color: #b98757;
-}
-
-header nav ul li a:link,
-header nav ul li a:active {
-  color: #45230f;
 }
 
 @media screen and (min-width: 600px) {
@@ -299,14 +293,14 @@ header nav ul li a:active {
     display: inline-block;
     color: #45230f;
   }
-  header nav ul a,
-  header nav ul a:active,
-  header nav ul a:visited {
+  header nav ul a:link,
+header nav ul a:active,
+header nav ul a:visited {
     color: #45230f;
   }
-  header nav ul a::after,
-  header nav ul a:active::after,
-  header nav ul a:visited::after {
+  header nav ul a:link::after,
+header nav ul a:active::after,
+header nav ul a:visited::after {
     content: "";
     height: 4px;
     width: 0;
@@ -317,20 +311,18 @@ header nav ul li a:active {
     transition: all 0.2s linear;
     transition-timing-function: ease-out;
   }
-  header nav ul a:hover,
-  header nav ul a:active,
-  header nav ul a:active:hover,
-  header nav ul a:active:active,
-  header nav ul a:visited:hover,
-  header nav ul a:visited:active {
+  header nav ul a:link:hover, header nav ul a:link:active,
+header nav ul a:active:hover,
+header nav ul a:active:active,
+header nav ul a:visited:hover,
+header nav ul a:visited:active {
     background-color: transparent;
   }
-  header nav ul a:hover::after,
-  header nav ul a:active::after,
-  header nav ul a:active:hover::after,
-  header nav ul a:active:active::after,
-  header nav ul a:visited:hover::after,
-  header nav ul a:visited:active::after {
+  header nav ul a:link:hover::after, header nav ul a:link:active::after,
+header nav ul a:active:hover::after,
+header nav ul a:active:active::after,
+header nav ul a:visited:hover::after,
+header nav ul a:visited:active::after {
     width: 80%;
   }
   header nav ul li {
@@ -373,8 +365,7 @@ main .hero {
   background-color: #d5e2e2;
 }
 main .hero .content-area {
-  background: linear-gradient(to bottom, #d5e2e2 10%, transparent 40%),
-    url("../assets/photos/coffee-hero-bg.jpg");
+  background: linear-gradient(to bottom, #d5e2e2 10%, transparent 40%), url("/assets/photos/coffee-hero-bg.jpg");
   background-size: 300%;
   background-position: 65% -55%;
   background-repeat: no-repeat;
@@ -394,11 +385,11 @@ main .hero p {
 main .hero .btn {
   margin: 0 auto 10rem auto;
 }
-main .hero [data-device="tablet-plus"] {
+main .hero [data-device=tablet-plus] {
   display: none;
 }
 main .about-coffees {
-  background: url("../assets/photos/coffee-beans-bg.jpg");
+  background: url("/assets/photos/coffee-beans-bg.jpg");
   background-size: 200%;
   background-position: center;
 }
@@ -417,8 +408,7 @@ main .hours-location {
   color: #f2f2f2;
   text-align: center;
 }
-main .hours-location .content-area > p:nth-of-type(2),
-main .hours-location .content-area > p:nth-of-type(5) {
+main .hours-location .content-area > p:nth-of-type(2), main .hours-location .content-area > p:nth-of-type(5) {
   margin-bottom: 4rem;
 }
 main .hours-location h2 {
@@ -513,8 +503,7 @@ main .coffee-club .content-area form input {
   margin-bottom: 4rem;
   border: 2px solid transparent;
 }
-main .coffee-club .content-area form input:focus,
-main .coffee-club .content-area form input:focus-visible {
+main .coffee-club .content-area form input:focus, main .coffee-club .content-area form input:focus-visible {
   outline: none;
   border: 2px solid #f7b129;
   box-shadow: 0 0 20px #b98757;
@@ -538,10 +527,7 @@ main .coffee-club .content-area form button:hover {
 
 @media screen and (min-width: 600px) {
   main .hero .content-area {
-    background: linear-gradient(to bottom, #d5e2e2 10%, transparent 40%),
-      linear-gradient(to right, #d5e2e2 45%, transparent 50%),
-      linear-gradient(to left, #d5e2e2 20%, transparent 30%),
-      url("../assets/photos/coffee-hero-bg.jpg");
+    background: linear-gradient(to bottom, #d5e2e2 10%, transparent 40%), linear-gradient(to right, #d5e2e2 45%, transparent 50%), linear-gradient(to left, #d5e2e2 20%, transparent 30%), url("/assets/photos/coffee-hero-bg.jpg");
     background-size: 1500px;
     background-position: -625px 50px;
     background-repeat: no-repeat;
@@ -550,7 +536,7 @@ main .coffee-club .content-area form button:hover {
     padding: 0;
   }
   main .hero .content-area h1,
-  main .hero .content-area p {
+main .hero .content-area p {
     margin-left: 3rem;
     width: 80%;
   }
@@ -558,10 +544,10 @@ main .coffee-club .content-area form button:hover {
     margin-left: 3rem;
     margin-bottom: 30rem;
   }
-  main .hero .content-area [data-device="mobile"] {
+  main .hero .content-area [data-device=mobile] {
     display: none;
   }
-  main .hero .content-area [data-device="tablet-plus"] {
+  main .hero .content-area [data-device=tablet-plus] {
     display: block;
   }
   main .about-coffees {
@@ -586,8 +572,8 @@ main .coffee-club .content-area form button:hover {
     width: 50%;
   }
   main .menu .content-area .coffees > p,
-  main .menu .content-area .teas > p,
-  main .menu .content-area .snacks > p {
+main .menu .content-area .teas > p,
+main .menu .content-area .snacks > p {
     width: 100%;
     margin: 4rem 0;
   }
@@ -612,7 +598,7 @@ main .coffee-club .content-area form button:hover {
 }
 @media screen and (min-width: 999px) {
   main .hero {
-    background: url("../assets/photos/coffee-hero-bg.jpg");
+    background: url("/assets/photos/coffee-hero-bg.jpg");
     background-size: 2000px;
     background-position: 50% -350px;
   }
