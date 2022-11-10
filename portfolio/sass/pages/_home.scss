@@ -110,6 +110,10 @@
     width: 90%;
     margin: 0 auto;
     padding-bottom: 5rem;
+
+    p {
+      margin-bottom: 3rem;
+    }
   }
 }
 
@@ -395,6 +399,8 @@
   .about-me {
     .content {
       width: 50%;
+
+      font-size: 2.2rem;
     }
   }
 
