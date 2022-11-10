@@ -47,9 +47,6 @@ p {
 a {
   text-decoration: none;
 }
-a:link, a:active, a:visited {
-  color: white;
-}
 
 .btn {
   display: inline-block;
@@ -243,6 +240,10 @@ header nav ul {
   z-index: -1;
   width: 100%;
 }
+header nav ul a:link,
+header nav ul a:active {
+  color: #f2f2f2;
+}
 header nav ul li {
   width: 100%;
   background-color: #233237;
@@ -251,16 +252,6 @@ header nav ul li {
   font-size: 2rem;
   text-transform: uppercase;
   text-align: center;
-}
-header nav ul li a:link,
-header nav ul li a:active,
-header nav ul li a:visited {
-  color: #f2f2f2;
-}
-header nav ul li a.nav-link:link,
-header nav ul li a.nav-link:visited,
-header nav ul li a.nav-link:active {
-  color: #f2f2f2;
 }
 header nav ul li:active {
   background-color: #b98757;
