@@ -257,7 +257,7 @@ header nav ul {
 header nav ul li {
   width: 100%;
   background-color: #233237;
-  color: #f2f2f2;
+  color: #45230f;
   padding: 1rem 0;
   font-size: 2rem;
   text-transform: uppercase;
@@ -269,7 +269,7 @@ header nav ul li:active {
 
 header nav ul li a:link,
 header nav ul li a:active {
-  color: #f2f2f2;
+  color: #45230f;
 }
 
 @media screen and (min-width: 600px) {

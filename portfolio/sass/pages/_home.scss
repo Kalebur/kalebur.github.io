@@ -1,0 +1,453 @@
+.colored-text {
+  color: $color-primary;
+}
+
+.content {
+  padding: 3rem 1.5rem;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.main-nav {
+  position: fixed;
+  width: 105%;
+  height: 100vh;
+  background-color: $color-primary-dim;
+  z-index: 1;
+  margin-left: -5%;
+  transform: translateY(-3rem);
+  clip-path: circle(3.75rem at calc(100% - 7.75rem) 6.75rem);
+  transition: $transition-default;
+
+  ul {
+    @include absolute-center;
+    width: 100%;
+  }
+
+  li {
+    width: 100%;
+    display: block;
+    text-transform: uppercase;
+    padding: 5rem 0;
+    transition: $transition-default;
+
+    font-size: 3rem;
+    text-align: center;
+
+    a {
+      cursor: pointer;
+    }
+
+    &:hover,
+    &:active {
+      background-color: $color-secondary;
+    }
+  }
+}
+
+.hero {
+  height: 50vh;
+  width: 100vw;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("../assets/images/hero-bg-sm.webp");
+  background-size: cover;
+  background-position: center;
+
+  .content {
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    h1 {
+      width: 100%;
+      @include absolute-center;
+    }
+
+    .hamburger {
+      height: 7.5rem;
+      width: 7.5rem;
+      position: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      right: 5%;
+      background-color: $color-primary-dim;
+      border-radius: $radius-circle;
+      z-index: 10;
+
+      font-size: 5rem;
+
+      .fa-xmark {
+        display: none;
+      }
+
+      i {
+        pointer-events: none;
+      }
+
+      &.nav-active {
+        .fa-bars {
+          display: none;
+        }
+
+        .fa-xmark {
+          display: inline-block;
+        }
+
+        & + nav {
+          clip-path: circle(150% at 2.5% 95%);
+        }
+      }
+    }
+  }
+}
+
+.about-me {
+  background-color: $background-secondary;
+
+  .content {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+  }
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+
+  .project-card {
+    position: relative;
+    width: 100%;
+    margin-bottom: 5rem;
+    border-radius: 10px;
+    background-color: $background-card;
+
+    .card-front {
+      height: 100%;
+      padding: 10px;
+
+      img {
+        width: 100%;
+        border-radius: $radius-default;
+        box-shadow: $shadow-no-x;
+        margin-bottom: 3rem;
+      }
+
+      h3 {
+        text-transform: uppercase;
+        margin-top: 3rem;
+        position: relative;
+        min-height: 10rem;
+        border-bottom: 2px solid $color-primary;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 2rem;
+
+        font-size: 3rem;
+
+        // &::after {
+        //   content: "";
+        //   width: 90%;
+        //   height: 2px;
+        //   background-color: $color-primary-dim;
+        //   position: absolute;
+        //   bottom: -5px;
+        //   left: 5%;
+        // }
+      }
+
+      h4 {
+        border-bottom: 2px solid $color-text;
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+        padding-bottom: 1rem;
+
+        font-size: 2rem;
+      }
+
+      ul {
+        margin-bottom: 3rem;
+
+        li {
+          list-style: disc;
+          margin-left: 2rem;
+          margin-bottom: 3rem;
+
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+    .card-back {
+      position: relative;
+
+      .links {
+        position: relative;
+      }
+    }
+  }
+}
+
+.contact-me {
+  background-color: $background-secondary;
+
+  label {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .select-group {
+    position: relative;
+
+    select {
+      text-shadow: $shadow-text;
+    }
+
+    .select-icon {
+      position: absolute;
+      top: 35%;
+      right: 1rem;
+      font-size: 5rem;
+      font-weight: bold;
+      pointer-events: none;
+      text-shadow: $shadow-text;
+      transform: translateY(-5%);
+    }
+  }
+
+  .input-group {
+    position: relative;
+
+    .validation-info {
+      display: none;
+      position: absolute;
+      right: 0;
+      bottom: -2rem;
+      font-size: 1.2rem;
+
+      &.displayed {
+        display: block;
+      }
+    }
+  }
+}
+
+.alert-box {
+  position: fixed;
+  width: 75%;
+  left: 50%;
+  bottom: 0;
+  background-color: darken($color-primary-dim, 10);
+  padding: 2rem;
+  border-radius: $radius-default;
+  transform: translate(-50%, 100%);
+  box-shadow: $shadow-no-x;
+  transition: $transition-default;
+  transition-delay: 0s;
+
+  &.displayed {
+    transform: translate(-50%, -10%);
+    transition-delay: 1s;
+  }
+
+  .close-button {
+    font-size: 3rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    color: $color-secondary;
+    z-index: 1;
+
+    ::after {
+      content: "";
+      width: 20px;
+      height: 20px;
+      background-color: $color-text;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: -1;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .content {
+    width: 80%;
+  }
+
+  .hero .content .hamburger {
+    display: none;
+  }
+
+  .about-me .content {
+    width: 70%;
+    font-size: 1.8rem;
+  }
+
+  .alert-box {
+    width: 60%;
+
+    font-size: 2rem;
+  }
+
+  .main-nav {
+    background-color: transparent;
+    position: relative;
+    transform: translateY(0);
+    height: initial;
+    width: initial;
+    margin-left: 0;
+    width: 100%;
+    padding-right: 3rem;
+    clip-path: unset;
+
+    ul {
+      display: inline-block;
+      position: relative;
+      transform: translate(0, 0);
+      top: initial;
+      left: initial;
+      display: flex;
+      justify-content: space-between;
+
+      li {
+        display: inline-block;
+        width: initial;
+        flex-basis: 30%;
+        border-radius: $radius-medium;
+        padding: 2rem 0;
+
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .hero {
+    height: 75vh;
+  }
+
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+
+    .project-card {
+      .card-front {
+        h3 {
+          font-size: 3rem;
+        }
+      }
+    }
+
+    .card-back {
+      position: relative;
+      transform: translatey(-150%);
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .content {
+    width: 50%;
+  }
+
+  .alert-box {
+    width: 40%;
+
+    font-size: 2.2rem;
+  }
+
+  .hero {
+    height: 90vh;
+  }
+
+  .main-nav ul li {
+    font-size: 2.5rem;
+  }
+
+  .about-me {
+    .content {
+      width: 50%;
+    }
+  }
+
+  .my-projects {
+    .content {
+      width: 90%;
+      .projects-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 3rem;
+
+        .project-card {
+          border-radius: $radius-default;
+          perspective: 150rem;
+          -moz-perspective: 150rem;
+          font-size: 1.8rem;
+          background-color: transparent;
+
+          &:hover {
+            .card-front {
+              transform: rotateY(-180deg);
+            }
+
+            .card-back {
+              transform: rotateY(0);
+            }
+          }
+
+          .card-front,
+          .card-back {
+            transition: $transition-default;
+            border-radius: $radius-medium;
+          }
+
+          .card-front {
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            background: linear-gradient(
+              to bottom right,
+              #444,
+              $background-card
+            );
+
+            p {
+              margin-bottom: 15rem;
+            }
+          }
+
+          .card-back {
+            height: 100%;
+            width: 100%;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(to bottom right, #444, #222);
+
+            transform: rotateY(180deg);
+            backface-visibility: hidden;
+
+            .links {
+              width: 80%;
+              @include absolute-center;
+
+              a:first-of-type {
+                margin-bottom: 10rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

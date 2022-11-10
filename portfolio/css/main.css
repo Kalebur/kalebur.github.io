@@ -276,15 +276,30 @@ footer {
   text-transform: uppercase;
   margin-top: 3rem;
   position: relative;
+  min-height: 10rem;
+  border-bottom: 2px solid #00ff7f;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 2rem;
+  font-size: 3rem;
 }
-.projects-container .project-card .card-front h3::after {
-  content: "";
-  width: 90%;
-  height: 2px;
-  background-color: #07be62;
-  position: absolute;
-  bottom: -5px;
-  left: 5%;
+.projects-container .project-card .card-front h4 {
+  border-bottom: 2px solid #fff;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+}
+.projects-container .project-card .card-front ul {
+  margin-bottom: 3rem;
+}
+.projects-container .project-card .card-front ul li {
+  list-style: disc;
+  margin-left: 2rem;
+  margin-bottom: 3rem;
+  font-size: 1.8rem;
 }
 .projects-container .project-card .card-back {
   position: relative;
@@ -331,14 +346,21 @@ footer {
 }
 
 .alert-box {
-  position: relative;
-  width: 50%;
-  left: 0;
-  top: 0;
-  background-color: #07be62;
+  position: fixed;
+  width: 75%;
+  left: 50%;
+  bottom: 0;
+  background-color: #058d49;
   padding: 2rem;
   border-radius: 5px;
+  transform: translate(-50%, 100%);
   box-shadow: 0 5px 20px black;
+  transition: all 0.4s;
+  transition-delay: 0s;
+}
+.alert-box.displayed {
+  transform: translate(-50%, -10%);
+  transition-delay: 1s;
 }
 .alert-box .close-button {
   font-size: 3rem;
@@ -348,6 +370,18 @@ footer {
   cursor: pointer;
   color: #ff0048;
   z-index: 1;
+}
+.alert-box .close-button ::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @media screen and (min-width: 601px) {
@@ -360,6 +394,10 @@ footer {
   .about-me .content {
     width: 70%;
     font-size: 1.8rem;
+  }
+  .alert-box {
+    width: 60%;
+    font-size: 2rem;
   }
   .main-nav {
     background-color: transparent;
@@ -398,8 +436,8 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
   }
-  .projects-container .card-front p {
-    margin-bottom: 5rem;
+  .projects-container .project-card .card-front h3 {
+    font-size: 3rem;
   }
   .projects-container .card-back {
     position: relative;
@@ -409,6 +447,10 @@ footer {
 @media screen and (min-width: 1000px) {
   .content {
     width: 50%;
+  }
+  .alert-box {
+    width: 40%;
+    font-size: 2.2rem;
   }
   .hero {
     height: 90vh;

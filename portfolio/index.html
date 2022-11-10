@@ -4,9 +4,271 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>James Smith Portfolio</title>
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,600;0,900;1,400&family=Roboto+Slab:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Portfolio | Dev by James</title>
   </head>
   <body>
-    <h1>This is where my portfolio goes</h1>
+    <header class="hero">
+      <div class="content">
+        <div class="hamburger">
+          <i class="fa-solid fa-bars"></i><i class="fa-solid fa-xmark"></i>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#my-projects">My Projects</a></li>
+            <li><a href="#contact-me">Contact Me</a></li>
+          </ul>
+        </nav>
+        <h1>
+          Hello! I'm <span class="colored-text">James</span>.<br />
+          I build <span class="colored-text">websites</span>.
+        </h1>
+      </div>
+    </header>
+    <section class="about-me" id="about-me">
+      <div class="content">
+        <h2>About <span class="colored-text">Me</span></h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Exercitationem dolorum a odio illum voluptatibus quasi veritatis, nemo
+          ex necessitatibus labore neque aliquam, nesciunt ab facere atque,
+          officiis assumenda magnam maxime?
+        </p>
+      </div>
+    </section>
+    <section class="my-projects" id="my-projects">
+      <div class="content">
+        <h2>My <span class="colored-text">Projects</span></h2>
+        <div class="projects-container">
+          <div class="project-card">
+            <div class="card-front">
+              <h3>Paws City Pet Supply Co.</h3>
+              <img
+                srcset="
+                  assets/images/paws-city-photo-sm.png  474w,
+                  assets/images/paws-city-photo-md.png  766w,
+                  assets/images/paws-city-photo-lg.png 1900w
+                "
+                sizes="(max-width:600px) 474px,
+                       (min-width:601px) and (max-width:999px) 766px,
+                       1900px"
+                src="assets/images/paws-city-photo-sm.png"
+                alt="A screenshot of the Paws City Pet Supply Co. website."
+              />
+              <h4>Features</h4>
+              <ul>
+                <li>Create a responsive menu with JavaScript/CSS</li>
+                <li>Create a simple hide/show div with CSS</li>
+                <li>
+                  Add your own transition animation(s) to an element on hover.
+                </li>
+                <li>
+                  Create and populate a JavaScript array with one or more values
+                  and display the contents of some or all of the array on your
+                  page
+                </li>
+              </ul>
+            </div>
+            <div class="card-back">
+              <div class="links">
+                <a
+                  class="btn"
+                  href="paws-city/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View Site</a
+                >
+                <a
+                  class="btn"
+                  href="https://github.com/Kalebur/paws-city-pets"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View GitHub Repo</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="card-front">
+              <h3>Derby City Drip</h3>
+              <img
+                srcset="
+                  assets/images/derby-city-sm.png  390w,
+                  assets/images/derby-city-md.png  702w,
+                  assets/images/derby-city-lg.png 1900w
+                "
+                sizes="(max-width:600px) 390px,
+                       (min-width:601px) and (max-width:999px) 702px,
+                       1900px"
+                src="assets/images/derby-city-sm.png"
+                alt="A screenshot of the Derby City Drip website."
+              />
+              <h4>Features</h4>
+              <ul>
+                <li>Create a responsive menu with JavaScript</li>
+                <li>
+                  Add your own transition animation(s) to an element on hover.
+                </li>
+                <li>Create a simple hide/show div with CSS</li>
+              </ul>
+            </div>
+            <div class="card-back">
+              <div class="links">
+                <a
+                  class="btn"
+                  href="derby-city-drip/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View Site</a
+                >
+                <a
+                  class="btn"
+                  href="https://github.com/Kalebur/derby-city-drip"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View GitHub Repo</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="card-front">
+              <h3>Luna Bella's Authentic Italian</h3>
+              <img
+                srcset="
+                  assets/images/luna-sm.webp 442w,
+                  assets/images/luna-md.webp 726w,
+                  assets/images/luna-lg.webp 952w
+                "
+                sizes="(max-width:600px) 442px,
+                       (min-width:601px) and (max-width:999px) 726px,
+                       952px"
+                src="assets/images/luna-sm.png"
+                alt="A screenshot of the Luna Bella's Authentic Italian website."
+              />
+              <h4>Features</h4>
+              <ul>
+                <li>
+                  Fully responsive site with hamburger on mobile screens smaller
+                  than 600px
+                </li>
+                <li>
+                  Create and populate a JavaScript array with one or more values
+                  and display the contents of some or all of the array on your
+                  page
+                </li>
+                <li>
+                  Add your own transition animation(s) to an element on hover.
+                </li>
+                <li>Create a responsive menu with JavaScript/CSS</li>
+                <li>JavaScript form validation</li>
+              </ul>
+            </div>
+            <div class="card-back">
+              <div class="links">
+                <a
+                  class="btn"
+                  href="luna-bellas/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View Site</a
+                >
+                <a
+                  class="btn"
+                  href="https://github.com/Kalebur/luna-bellas-authentic-italian"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View GitHub Repo</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact-me" id="contact-me">
+      <div class="content">
+        <form action="javascript:void(0);" method="post">
+          <h2>Contact <span class="colored-text">Me</span></h2>
+          <div class="input-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              spellcheck="false"
+              autocomplete="name"
+              required
+            />
+            <span class="validation-info"
+              >Name must be at least 2 letters.</span
+            >
+          </div>
+          <div class="input-group">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              spellcheck="false"
+              autocomplete="email"
+              required
+            />
+            <span class="validation-info"
+              >Please enter a valid e-mail address.</span
+            >
+          </div>
+          <div class="input-group select-group">
+            <div class="select-icon">&darr;</div>
+            <label for="contact-reason">Purpose of Contact</label>
+            <select name="contact-reason" id="contact-reason">
+              <option value="job-interview">Job Interview</option>
+              <option value="job-offer">Job Offer</option>
+              <option value="general-comment">General Comment</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="comments">Comments</label>
+            <textarea
+              name="comments"
+              id="comments"
+              cols="30"
+              rows="10"
+              required
+            ></textarea>
+            <span class="validation-info"
+              >Message must be at least 2 letters.</span
+            >
+          </div>
+          <a href="javascript:void(0);" class="btn">Send Message</a>
+        </form>
+      </div>
+    </section>
+    <div class="alert-box">
+      <h3>I'm Open for Work</h3>
+      <p>
+        I'm currently looking for work! Have a look around and see if I might be
+        a good fit for your company.
+      </p>
+      <div class="close-button"><i class="fa-solid fa-circle-xmark"></i></div>
+    </div>
+    <footer>&copy; 2022 James Smith</footer>
+    <script src="index.js"></script>
   </body>
 </html>

@@ -10,7 +10,6 @@ window.addEventListener("DOMContentLoaded", () => {
     const closeIcon = '<i class="fa-solid fa-xmark"></i>';
     const menuIcon = '<i class="fa-solid fa-bars"></i>';
 
-    console.log(navMenu.offsetHeight);
     if (menuActive) {
       header.style.height = defaultHeaderHeight;
       navMenu.style.transform = "translateY(-100%)";
