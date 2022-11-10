@@ -1,3 +1,53 @@
+@-webkit-keyframes send-message {
+  0% {
+    display: block;
+    opacity: 0;
+  }
+  40% {
+    left: calc(50% - 1.25rem);
+  }
+  45% {
+    top: 120%;
+  }
+  50% {
+    left: 40%;
+    top: 120%;
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    left: 110%;
+    top: 120%;
+  }
+}
+@keyframes send-message {
+  0% {
+    display: block;
+    opacity: 0;
+  }
+  40% {
+    left: calc(50% - 1.25rem);
+  }
+  45% {
+    top: 120%;
+  }
+  50% {
+    left: 40%;
+    top: 120%;
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    left: 110%;
+    top: 120%;
+  }
+}
 .btn {
   width: 90%;
   display: block;
@@ -333,16 +383,43 @@ footer {
 }
 .contact-me .input-group {
   position: relative;
+  margin-bottom: 6rem;
+}
+.contact-me .input-group input.invalid,
+.contact-me .input-group textarea.invalid {
+  border: 5px solid red;
+  box-shadow: 0 0 10rem red;
+}
+.contact-me .input-group input.invalid + .validation-info,
+.contact-me .input-group textarea.invalid + .validation-info {
+  display: block;
 }
 .contact-me .input-group .validation-info {
   display: none;
   position: absolute;
   right: 0;
-  bottom: -2rem;
-  font-size: 1.2rem;
+  bottom: -4rem;
+  font-size: 1.8rem;
 }
-.contact-me .input-group .validation-info.displayed {
+.contact-me #btn-send-message {
+  position: relative;
+  margin: 4rem auto;
+}
+.contact-me #btn-send-message .message-icon {
+  font-size: 4rem;
+  display: none;
+  position: absolute;
+  left: calc(50% - 1.25rem);
+  top: calc(50% - 2.5rem);
+}
+.contact-me #btn-send-message .message-icon.displayed {
   display: block;
+  -webkit-animation-name: send-message;
+          animation-name: send-message;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .alert-box {

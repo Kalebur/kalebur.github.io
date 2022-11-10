@@ -147,16 +147,6 @@
         padding-bottom: 2rem;
 
         font-size: 3rem;
-
-        // &::after {
-        //   content: "";
-        //   width: 90%;
-        //   height: 2px;
-        //   background-color: $color-primary-dim;
-        //   position: absolute;
-        //   bottom: -5px;
-        //   left: 5%;
-        // }
       }
 
       h4 {
@@ -221,16 +211,45 @@
 
   .input-group {
     position: relative;
+    margin-bottom: 6rem;
+
+    input,
+    textarea {
+      &.invalid {
+        border: 5px solid red;
+        box-shadow: $shadow-invalid;
+
+        & + .validation-info {
+          display: block;
+        }
+      }
+    }
 
     .validation-info {
       display: none;
       position: absolute;
       right: 0;
-      bottom: -2rem;
-      font-size: 1.2rem;
+      bottom: -4rem;
+      font-size: 1.8rem;
+    }
+  }
+
+  #btn-send-message {
+    position: relative;
+    margin: 4rem auto;
+
+    .message-icon {
+      font-size: 4rem;
+      display: none;
+      position: absolute;
+      left: calc(50% - 1.25rem);
+      top: calc(50% - 2.5rem);
 
       &.displayed {
         display: block;
+        animation-name: send-message;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
       }
     }
   }
