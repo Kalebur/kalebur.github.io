@@ -210,14 +210,16 @@ footer {
 .main-nav li a {
   cursor: pointer;
 }
-.main-nav li:hover, .main-nav li:active {
+.main-nav li:hover,
+.main-nav li:active {
   background-color: #ff0048;
 }
 
 .hero {
   height: 50vh;
   width: 100vw;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../assets/images/hero-bg-sm.webp");
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("../assets/images/hero-bg-sm.webp");
   background-size: cover;
   background-position: center;
 }
@@ -393,6 +395,37 @@ footer {
   animation-fill-mode: forwards;
 }
 
+.contact-me .disclaimer {
+  font-size: 1rem;
+  margin-bottom: 4rem;
+  margin-top: 8rem;
+}
+
+.contact-me .disclaimer > span {
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.contact-me .social-icons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contact-me .social-icons .social-icon > a {
+  color: #058d49;
+  transition: all 0.5s;
+  -webkit-text-stroke: 1px #1e281f;
+
+  font-size: 8rem;
+}
+
+.contact-me .social-icons .social-icon > a:hover {
+  color: transparent;
+  -webkit-text-stroke: 1px #00ff7f;
+  cursor: pointer;
+}
+
 .alert-box {
   position: fixed;
   width: 75%;
@@ -531,7 +564,7 @@ footer {
     transform: rotateY(0);
   }
   .my-projects .content .projects-container .project-card .card-front,
-.my-projects .content .projects-container .project-card .card-back {
+  .my-projects .content .projects-container .project-card .card-back {
     transition: all 0.4s;
     border-radius: 10px;
   }
@@ -561,7 +594,13 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  .my-projects .content .projects-container .project-card .card-back .links a:first-of-type {
+  .my-projects
+    .content
+    .projects-container
+    .project-card
+    .card-back
+    .links
+    a:first-of-type {
     margin-bottom: 10rem;
   }
 }
