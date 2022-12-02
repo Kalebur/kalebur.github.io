@@ -396,7 +396,7 @@ footer {
 }
 
 .contact-me .disclaimer {
-  font-size: 1rem;
+  font-size: 1.6rem;
   margin-bottom: 4rem;
   margin-top: 8rem;
 }
@@ -417,7 +417,7 @@ footer {
   transition: all 0.5s;
   -webkit-text-stroke: 1px #1e281f;
 
-  font-size: 8rem;
+  font-size: 10rem;
 }
 
 .contact-me .social-icons .social-icon > a:hover {
