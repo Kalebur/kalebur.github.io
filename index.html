@@ -4,9 +4,441 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>James Smith Portfolio</title>
+
+    <link rel="stylesheet" href="portfolio/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,600;0,900;1,400&family=Roboto+Slab:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Portfolio | Dev by James</title>
   </head>
   <body>
-    <h1>This is a test of the header system.</h1>
+    <header class="hero">
+      <div class="content">
+        <div class="hamburger">
+          <i class="fa-solid fa-bars"></i><i class="fa-solid fa-xmark"></i>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#my-projects">My Projects</a></li>
+            <li><a href="#contact-me">Contact Me</a></li>
+          </ul>
+        </nav>
+        <h1>
+          Hello! I'm <span class="colored-text">James</span>.<br />
+          I build <span class="colored-text">websites</span>.
+        </h1>
+      </div>
+    </header>
+    <section class="about-me" id="about-me">
+      <div class="content">
+        <h2>About <span class="colored-text">Me</span></h2>
+        <p>
+          I fell in love with technology as a little boy and got my first
+          experience with programming using Visual Basic 6 during the early
+          2000's. After that, I've been tinkering with various languages and
+          technologies until finally settling on web development a couple of
+          years ago. I've been studying web development since and am looking
+          forward to making a career out of it!
+        </p>
+        <p>
+          Outside of my interest in web dev, I'm into video games, game
+          development and 3D art. I've spent some time working with the Unity
+          game engine and am going to be looking into the Unreal engine as well.
+        </p>
+      </div>
+    </section>
+    <section class="my-projects" id="my-projects">
+      <div class="content">
+        <h2>My <span class="colored-text">Projects</span></h2>
+        <div class="projects-container">
+          <div class="project-card">
+            <div class="card-front">
+              <h3>Chunky Chicken Entertainment</h3>
+              <img
+                src="portfolio/assets/images/chunky-chicken-header.jpg"
+                alt="A screenshot of the Chunky Chicken Entertainment website."
+              />
+              <h4>Features</h4>
+              <ul>
+                <li>
+                  Use arrays, objects, sets or maps to store and retrieve
+                  information that is displayed in your app.
+                </li>
+                <li>
+                  Analyze data that is stored in arrays, objects, sets or maps
+                  and display information about it in your app.
+                </li>
+                <li>
+                  Retrieve data from a third-party API and use it to display
+                  something within your app.
+                </li>
+                <li>
+                  Create a node.js web server using a modern framework such as
+                  Express.js or Fastify. Serve at least one route that your app
+                  uses.
+                </li>
+                <li>
+                  Create a function that accepts two or more input parameters
+                  and returns a value that is calculated or determined by the
+                  inputs.
+                </li>
+                <li>
+                  Implement modern interactive UI features (autocomplete
+                  functionality on search bar).
+                </li>
+              </ul>
+            </div>
+            <div class="card-back">
+              <div class="links">
+                <a
+                  class="btn"
+                  href="https://chunky-chicken-entertainment.onrender.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View Site</a
+                >
+                <a
+                  class="btn"
+                  href="https://github.com/Kalebur/movie-info-site"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View GitHub Repo</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="card-front">
+              <h3>Top Tracks</h3>
+              <img
+                src="portfolio//assets/images/top-tracks-heading.jpg"
+                alt="A screenshot of the Top Tracks website."
+              />
+              <h4>Features</h4>
+              <ul>
+                <li>
+                  Collaborative project to gain experience working in a team
+                  using GitHub.
+                </li>
+                <li>
+                  Connect with the Spotify API to find and present data to
+                  users.
+                </li>
+                <li>
+                  Implement local storage to maintain user vote history between
+                  sessions.
+                </li>
+                <li>
+                  Utilizes a MySQL database to store persistent track/vote
+                  information.
+                </li>
+                <li>
+                  Runs a Node/Express back-end that serves up routes to power
+                  the front-end.
+                </li>
+                <li>
+                  Implement modern interactive UI features. (autocomplete
+                  functionality on search bar)
+                </li>
+              </ul>
+            </div>
+            <div class="card-back">
+              <div class="links">
+                <a
+                  class="btn"
+                  href="https://wd2-toptracks.onrender.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View Site</a
+                >
+                <a
+                  class="btn"
+                  href="https://github.com/Kalebur/wd2-toptracks"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View GitHub Repo</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="card-front">
+              <h3>Paws City Pet Supply Co.</h3>
+              <img
+                srcset="
+                  portfolio//assets/images/paws-city-photo-sm.png  474w,
+                  portfolio//assets/images/paws-city-photo-md.png  766w,
+                  portfolio//assets/images/paws-city-photo-lg.png 1900w
+                "
+                sizes="(max-width:600px) 474px,
+                       (min-width:601px) and (max-width:999px) 766px,
+                       1900px"
+                src="portfolio//assets/images/paws-city-photo-sm.png"
+                alt="A screenshot of the Paws City Pet Supply Co. website."
+              />
+              <h4>Features</h4>
+              <ul>
+                <li>Create a responsive menu with JavaScript/CSS</li>
+                <li>Create a simple hide/show div with CSS</li>
+                <li>
+                  Add your own transition animation(s) to an element on hover.
+                </li>
+                <li>
+                  Create and populate a JavaScript array with one or more values
+                  and display the contents of some or all of the array on your
+                  page
+                </li>
+                <li>
+                  Because the site is only one page, the search field/button
+                  will open a new tab/window and run your query through Google
+                  Shopping
+                </li>
+              </ul>
+            </div>
+            <div class="card-back">
+              <div class="links">
+                <a
+                  class="btn"
+                  href="paws-city/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View Site</a
+                >
+                <a
+                  class="btn"
+                  href="https://github.com/Kalebur/paws-city-pets"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View GitHub Repo</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="card-front">
+              <h3>Luna Bella's Authentic Italian</h3>
+              <img
+                srcset="
+                  portfolio//assets/images/luna-sm.webp 442w,
+                  portfolio//assets/images/luna-md.webp 726w,
+                  portfolio//assets/images/luna-lg.webp 952w
+                "
+                sizes="(max-width:600px) 442px,
+                       (min-width:601px) and (max-width:999px) 726px,
+                       952px"
+                src="portfolio//assets/images/luna-sm.png"
+                alt="A screenshot of the Luna Bella's Authentic Italian website."
+              />
+              <h4>Features</h4>
+              <ul>
+                <li>
+                  Fully responsive site with hamburger on mobile screens smaller
+                  than 600px
+                </li>
+                <li>
+                  Create and populate a JavaScript array with one or more values
+                  and display the contents of some or all of the array on your
+                  page
+                </li>
+                <li>
+                  Add your own transition animation(s) to an element on hover.
+                </li>
+                <li>Create a responsive menu with JavaScript/CSS</li>
+                <li>JavaScript form validation</li>
+              </ul>
+            </div>
+            <div class="card-back">
+              <div class="links">
+                <a
+                  class="btn"
+                  href="luna-bellas/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View Site</a
+                >
+                <a
+                  class="btn"
+                  href="https://github.com/Kalebur/luna-bellas-authentic-italian"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View GitHub Repo</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="card-front">
+              <h3>Derby City Drip</h3>
+              <img
+                srcset="
+                  portfolio//assets/images/derby-city-sm.png  390w,
+                  portfolio//assets/images/derby-city-md.png  702w,
+                  portfolio//assets/images/derby-city-lg.png 1900w
+                "
+                sizes="(max-width:600px) 390px,
+                       (min-width:601px) and (max-width:999px) 702px,
+                       1900px"
+                src="portfolio//assets/images/derby-city-sm.png"
+                alt="A screenshot of the Derby City Drip website."
+              />
+              <h4>Features</h4>
+              <ul>
+                <li>Create a responsive menu with CSS/JavaScript</li>
+                <li>
+                  Add your own transition animation(s) to an element on hover.
+                </li>
+                <li>Create a simple hide/show div with CSS</li>
+                <li>
+                  Run PageSpeed Insights from google.com get a score of 60 or
+                  better
+                </li>
+              </ul>
+            </div>
+            <div class="card-back">
+              <div class="links">
+                <a
+                  class="btn"
+                  href="derby-city-drip/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View Site</a
+                >
+                <a
+                  class="btn"
+                  href="https://github.com/Kalebur/derby-city-drip"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View GitHub Repo</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact-me" id="contact-me">
+      <div class="content">
+        <form action="javascript:void(0);" method="post">
+          <h2>Contact <span class="colored-text">Me</span></h2>
+          <div class="input-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              spellcheck="false"
+              autocomplete="name"
+              required
+            />
+            <span class="validation-info"
+              >Name must be at least 2 letters.</span
+            >
+          </div>
+          <div class="input-group">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              spellcheck="false"
+              autocomplete="email"
+              required
+            />
+            <span class="validation-info"
+              >Please enter a valid e-mail address.</span
+            >
+          </div>
+          <div class="input-group select-group">
+            <div class="select-icon">&darr;</div>
+            <label for="contact-reason">Purpose of Contact</label>
+            <select name="contact-reason" id="contact-reason">
+              <option value="job-interview">Job Interview</option>
+              <option value="job-offer">Job Offer</option>
+              <option value="general-comment">General Comment</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="comments">Comments</label>
+            <textarea
+              name="comments"
+              id="comments"
+              cols="30"
+              rows="10"
+              required
+            ></textarea>
+            <span class="validation-info"
+              >Message must be at least 2 letters.</span
+            >
+          </div>
+          <a class="btn" id="btn-send-message" href="#btn-send-message"
+            ><span class="message-icon"
+              ><i class="fa-solid fa-envelope"></i></span
+            ><span class="btn-text">Send Message</span></a
+          >
+          <p class="disclaimer">
+            <span>DISCLAIMER:</span> Contact form isn't currently attached to
+            any sort of backend and is for example purposes only. If you need to
+            get in touch with me, use one of my socials listed below.
+          </p>
+        </form>
+        <div class="socials">
+          <h2>Socials</h2>
+          <div class="social-icons">
+            <div class="social-icon">
+              <a
+                href="https://twitter.com/KaleburDev"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow me on Twitter."
+              >
+                <i class="fa-brands fa-square-twitter"></i>
+              </a>
+            </div>
+            <div class="social-icon">
+              <a
+                href="https://www.linkedin.com/in/dev-by-james/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Connect with me on LinkedIn."
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </div>
+            <div class="social-icon">
+              <a
+                href="https://github.com/Kalebur"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Find my work on GitHub"
+              >
+                <i class="fa-brands fa-square-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="alert-box">
+      <h3>I'm Open for Work</h3>
+      <p>
+        I'm currently looking for work! Have a look around and see if I might be
+        a good fit for your company.
+      </p>
+      <div class="close-button"><i class="fa-solid fa-circle-xmark"></i></div>
+    </div>
+    <footer>&copy; 2022 James Smith</footer>
+    <script src="index.js"></script>
   </body>
 </html>
