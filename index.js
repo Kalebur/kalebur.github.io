@@ -32,20 +32,21 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   // Add blur event listeners to form inputs
-  name.addEventListener("blur", function () {
-    clearInvalidOnBlur(this);
-  });
-  email.addEventListener("blur", function () {
-    clearInvalidOnBlur(this);
-  });
-  msg.addEventListener("blur", function () {
-    clearInvalidOnBlur(this);
-  });
+  // name.addEventListener("blur", function () {
+  //   clearInvalidOnBlur(this);
+  // });
+  // email.addEventListener("blur", function () {
+  //   clearInvalidOnBlur(this);
+  // });
+  // msg.addEventListener("blur", function () {
+  //   clearInvalidOnBlur(this);
+  // });
 
   // Nav links close mobile nav menu when clicked
-  document.querySelectorAll("nav a").forEach(function (item) {
+  document.querySelectorAll(".nav-link").forEach(function (item) {
     item.addEventListener("click", function () {
       globalVars.hamburgerBtn.classList.remove("nav-active");
+      globalVars.navMenu.classList.remove("nav-active");
     });
   });
 
