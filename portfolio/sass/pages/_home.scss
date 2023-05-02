@@ -10,13 +10,13 @@
 
 .main-nav {
   position: fixed;
-  width: 105%;
+  width: 100vw;
   height: 100vh;
   background-color: $color-primary-dim;
   z-index: 1;
   margin-left: -5%;
   transform: translateY(-3rem);
-  clip-path: circle(3.75rem at calc(100% - 7.75rem) 6.75rem);
+  clip-path: circle(3.75rem at calc(100% - 7.5rem) 7.5rem);
   transition: $transition-default;
 
   ul {
@@ -43,13 +43,17 @@
       background-color: $color-secondary;
     }
   }
+
+  &.nav-active {
+    clip-path: circle(150% at calc(100% - 7.5rem) 7.5rem);
+  }
 }
 
 .hero {
   height: 50vh;
   width: 100vw;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url("../assets/images/hero-bg-sm.webp");
+    url("../portfolio/assets/images/hero-bg-sm.webp");
   background-size: cover;
   background-position: center;
 
@@ -71,7 +75,8 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      right: 5%;
+      right: 3.75rem;
+      top: 3.5rem;
       background-color: $color-primary-dim;
       border-radius: $radius-circle;
       z-index: 10;
@@ -93,10 +98,6 @@
 
         .fa-xmark {
           display: inline-block;
-        }
-
-        & + nav {
-          clip-path: circle(150% at 2.5% 95%);
         }
       }
     }

@@ -1,3 +1,28 @@
+@keyframes send-message {
+  0% {
+    display: block;
+    opacity: 0;
+  }
+  40% {
+    left: calc(50% - 1.25rem);
+  }
+  45% {
+    top: 120%;
+  }
+  50% {
+    left: 40%;
+    top: 120%;
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    left: 110%;
+    top: 120%;
+  }
+}
 .btn {
   width: 90%;
   display: block;
@@ -86,9 +111,7 @@ option {
   border: none;
   outline: none;
   color: #fff;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   cursor: pointer;
 }
 
@@ -159,14 +182,13 @@ footer {
 
 .main-nav {
   position: fixed;
-  width: 105%;
+  width: 100vw;
   height: 100vh;
   background-color: #07be62;
   z-index: 1;
   margin-left: -5%;
   transform: translateY(-3rem);
-  -webkit-clip-path: circle(3.75rem at calc(100% - 7.75rem) 6.75rem);
-          clip-path: circle(3.75rem at calc(100% - 7.75rem) 6.75rem);
+  clip-path: circle(3.75rem at calc(100% - 7.5rem) 7.5rem);
   transition: all 0.4s;
 }
 .main-nav ul {
@@ -191,11 +213,14 @@ footer {
 .main-nav li:hover, .main-nav li:active {
   background-color: #ff0048;
 }
+.main-nav.nav-active {
+  clip-path: circle(150% at calc(100% - 7.5rem) 7.5rem);
+}
 
 .hero {
   height: 50vh;
   width: 100vw;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../assets/images/hero-bg-sm.webp");
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../portfolio/assets/images/hero-bg-sm.webp");
   background-size: cover;
   background-position: center;
 }
@@ -219,7 +244,8 @@ footer {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  right: 5%;
+  right: 3.75rem;
+  top: 3.5rem;
   background-color: #07be62;
   border-radius: 50%;
   z-index: 10;
@@ -237,10 +263,6 @@ footer {
 .hero .content .hamburger.nav-active .fa-xmark {
   display: inline-block;
 }
-.hero .content .hamburger.nav-active + nav {
-  -webkit-clip-path: circle(150% at 2.5% 95%);
-          clip-path: circle(150% at 2.5% 95%);
-}
 
 .about-me {
   background-color: #1e281f;
@@ -249,6 +271,9 @@ footer {
   width: 90%;
   margin: 0 auto;
   padding-bottom: 5rem;
+}
+.about-me .content p {
+  margin-bottom: 3rem;
 }
 
 .projects-container {
@@ -276,15 +301,30 @@ footer {
   text-transform: uppercase;
   margin-top: 3rem;
   position: relative;
+  min-height: 10rem;
+  border-bottom: 2px solid #00ff7f;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 2rem;
+  font-size: 3rem;
 }
-.projects-container .project-card .card-front h3::after {
-  content: "";
-  width: 90%;
-  height: 2px;
-  background-color: #07be62;
-  position: absolute;
-  bottom: -5px;
-  left: 5%;
+.projects-container .project-card .card-front h4 {
+  border-bottom: 2px solid #fff;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+}
+.projects-container .project-card .card-front ul {
+  margin-bottom: 3rem;
+}
+.projects-container .project-card .card-front ul li {
+  list-style: disc;
+  margin-left: 2rem;
+  margin-bottom: 3rem;
+  font-size: 1.8rem;
 }
 .projects-container .project-card .card-back {
   position: relative;
@@ -318,27 +358,58 @@ footer {
 }
 .contact-me .input-group {
   position: relative;
+  margin-bottom: 6rem;
+}
+.contact-me .input-group input.invalid,
+.contact-me .input-group textarea.invalid {
+  border: 5px solid red;
+  box-shadow: 0 0 10rem red;
+}
+.contact-me .input-group input.invalid + .validation-info,
+.contact-me .input-group textarea.invalid + .validation-info {
+  display: block;
 }
 .contact-me .input-group .validation-info {
   display: none;
   position: absolute;
   right: 0;
-  bottom: -2rem;
-  font-size: 1.2rem;
+  bottom: -4rem;
+  font-size: 1.8rem;
 }
-.contact-me .input-group .validation-info.displayed {
+.contact-me #btn-send-message {
+  position: relative;
+  margin: 4rem auto;
+}
+.contact-me #btn-send-message .message-icon {
+  font-size: 4rem;
+  display: none;
+  position: absolute;
+  left: calc(50% - 1.25rem);
+  top: calc(50% - 2.5rem);
+}
+.contact-me #btn-send-message .message-icon.displayed {
   display: block;
+  animation-name: send-message;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
 
 .alert-box {
-  position: relative;
-  width: 50%;
-  left: 0;
-  top: 0;
-  background-color: #07be62;
+  position: fixed;
+  width: 75%;
+  left: 50%;
+  bottom: 0;
+  background-color: #058d49;
   padding: 2rem;
   border-radius: 5px;
+  transform: translate(-50%, 100%);
   box-shadow: 0 5px 20px black;
+  transition: all 0.4s;
+  transition-delay: 0s;
+}
+.alert-box.displayed {
+  transform: translate(-50%, -10%);
+  transition-delay: 1s;
 }
 .alert-box .close-button {
   font-size: 3rem;
@@ -348,6 +419,18 @@ footer {
   cursor: pointer;
   color: #ff0048;
   z-index: 1;
+}
+.alert-box .close-button ::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @media screen and (min-width: 601px) {
@@ -361,6 +444,10 @@ footer {
     width: 70%;
     font-size: 1.8rem;
   }
+  .alert-box {
+    width: 60%;
+    font-size: 2rem;
+  }
   .main-nav {
     background-color: transparent;
     position: relative;
@@ -370,8 +457,7 @@ footer {
     margin-left: 0;
     width: 100%;
     padding-right: 3rem;
-    -webkit-clip-path: unset;
-            clip-path: unset;
+    clip-path: unset;
   }
   .main-nav ul {
     display: inline-block;
@@ -398,8 +484,8 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
   }
-  .projects-container .card-front p {
-    margin-bottom: 5rem;
+  .projects-container .project-card .card-front h3 {
+    font-size: 3rem;
   }
   .projects-container .card-back {
     position: relative;
@@ -410,6 +496,10 @@ footer {
   .content {
     width: 50%;
   }
+  .alert-box {
+    width: 40%;
+    font-size: 2.2rem;
+  }
   .hero {
     height: 90vh;
   }
@@ -418,6 +508,7 @@ footer {
   }
   .about-me .content {
     width: 50%;
+    font-size: 2.2rem;
   }
   .my-projects .content {
     width: 90%;
@@ -425,8 +516,7 @@ footer {
   .my-projects .content .projects-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    -moz-column-gap: 3rem;
-         column-gap: 3rem;
+    column-gap: 3rem;
   }
   .my-projects .content .projects-container .project-card {
     border-radius: 5px;
@@ -442,15 +532,14 @@ footer {
     transform: rotateY(0);
   }
   .my-projects .content .projects-container .project-card .card-front,
-.my-projects .content .projects-container .project-card .card-back {
+  .my-projects .content .projects-container .project-card .card-back {
     transition: all 0.4s;
     border-radius: 10px;
   }
   .my-projects .content .projects-container .project-card .card-front {
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
+    backface-visibility: hidden;
     background: linear-gradient(to bottom right, #444, #333);
   }
   .my-projects .content .projects-container .project-card .card-front p {
@@ -464,8 +553,7 @@ footer {
     left: 0;
     background: linear-gradient(to bottom right, #444, #222);
     transform: rotateY(180deg);
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
+    backface-visibility: hidden;
   }
   .my-projects .content .projects-container .project-card .card-back .links {
     width: 80%;

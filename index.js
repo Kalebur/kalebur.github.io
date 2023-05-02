@@ -20,11 +20,14 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   globalVars.hamburgerBtn = document.querySelector(".hamburger");
+  globalVars.navMenu = document.querySelector("nav");
   globalVars.hamburgerBtn.addEventListener("click", function (e) {
     if (this.classList.contains("nav-active")) {
       this.classList.remove("nav-active");
+      globalVars.navMenu.classList.remove("nav-active");
     } else {
       this.classList.add("nav-active");
+      globalVars.navMenu.classList.add("nav-active");
     }
   });
 
